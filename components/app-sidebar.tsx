@@ -25,7 +25,7 @@ const NAV_MAIN = [
 ];
 
 const NAV_SYSTEM = [
-  { label: 'Watchlist', href: '/list',     icon: Heart    },
+  { label: 'Watchlist', href: '/watchlist', icon: Heart    },
   { label: 'History',   href: '/history',  icon: Clock    },
   { label: 'Settings',  href: '/settings', icon: Settings },
 ];
@@ -78,7 +78,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <Link href="/" className="flex items-center gap-3">
                 {/* Logo diamond */}
                 <div className="relative h-8 w-8 shrink-0 flex items-center justify-center rounded-lg"
-                  style={{ background: 'var(--neon-pink)', boxShadow: isDark ? '0 0 16px var(--neon-pink)' : 'none' }}>
+                  style={{ background: 'var(--neon-pink)' }}>
                   <Skull size={15} className="text-white" />
                 </div>
                 {!collapsed && (
@@ -103,9 +103,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         {/* ── LIVE indicator ── */}
         {!collapsed && (
           <div className="mx-2 mb-3 flex items-center gap-2 rounded-md px-2 py-1.5"
-            style={{ background: isDark ? 'rgba(57,255,20,0.07)' : 'rgba(21,102,0,0.06)' }}>
+            style={{ background: 'color-mix(in srgb, var(--neon-green) 8%, transparent)' }}>
             <div className="h-1.5 w-1.5 rounded-full animate-pulse"
-              style={{ background: 'var(--neon-green)', boxShadow: isDark ? '0 0 6px var(--neon-green)' : 'none' }} />
+              style={{ background: 'var(--neon-green)' }} />
             <span className="text-[0.5rem] tracking-widest" style={{ ...mono, color: 'var(--neon-green)' }}>
               SYSTEM ONLINE
             </span>

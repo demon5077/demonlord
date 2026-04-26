@@ -82,7 +82,7 @@
   --border: 0 0% 16%;
   --input: 0 0% 16%;
   --ring: 327 100% 50%;
-  --radius: 0.4rem;
+  --radius: 0.75rem;
 
   /* Sidebar — very dark, Rive-style pill */
   --sidebar: 0 0% 9%;
@@ -236,7 +236,7 @@ body::before {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 0.65rem 1.5rem;
-  border-radius: 0.4rem;
+  border-radius: var(--radius);
   cursor: pointer;
   transition: all 0.2s;
   display: inline-flex;
@@ -258,7 +258,7 @@ body::before {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 0.65rem 1.5rem;
-  border-radius: 0.4rem;
+  border-radius: var(--radius);
   cursor: pointer;
   transition: all 0.2s;
   display: inline-flex;
@@ -281,7 +281,7 @@ body::before {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 0.65rem 1.5rem;
-  border-radius: 0.4rem;
+  border-radius: var(--radius);
   cursor: pointer;
   transition: all 0.2s;
   display: inline-flex;

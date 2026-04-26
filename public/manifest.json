@@ -451,9 +451,10 @@
       "sizes": "1024x1024"
     }
   ],
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
+  "theme_color": "#FF006F",
+  "background_color": "#121212",
   "start_url": "/",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "description": "Free movie, TV and anime streaming"
 }

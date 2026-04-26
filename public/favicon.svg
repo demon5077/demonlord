@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#FF006F"/>
+  <g transform="translate(32,34)">
+    <!-- Skull shape -->
+    <ellipse cx="0" cy="-6" rx="12" ry="13" fill="white"/>
+    <!-- Eyes -->
+    <ellipse cx="-4" cy="-8" rx="3" ry="3.5" fill="#FF006F"/>
+    <ellipse cx="4" cy="-8" rx="3" ry="3.5" fill="#FF006F"/>
+    <!-- Nose -->
+    <ellipse cx="0" cy="-3" rx="1.5" ry="2" fill="#FF006F"/>
+    <!-- Jaw -->
+    <rect x="-9" y="3" width="18" height="6" rx="2" fill="white"/>
+    <!-- Teeth gaps -->
+    <rect x="-6" y="4" width="2" height="4" rx="1" fill="#FF006F"/>
+    <rect x="-1" y="4" width="2" height="4" rx="1" fill="#FF006F"/>
+    <rect x="4" y="4" width="2" height="4" rx="1" fill="#FF006F"/>
+  </g>
+</svg>
