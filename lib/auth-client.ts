@@ -1,9 +1,3 @@
-import { createAuthClient } from 'better-auth/react';
-import { usernameClient, multiSessionClient, magicLinkClient } from 'better-auth/client/plugins';
-
-export const authClient = createAuthClient({
-  baseURL: process.env.NEXT_PUBLIC_APP_URL,
-  plugins: [usernameClient(), multiSessionClient(), magicLinkClient()],
-});
-
-export const { signIn, signOut, signUp, useSession } = authClient;
+// Auth client stub. Firebase auth is used instead of better-auth.
+// See: lib/firebase/auth-context.tsx and components/auth-modal.tsx
+export const useSession = () => ({ data: null, isPending: false });
