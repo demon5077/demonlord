@@ -64,7 +64,7 @@ export const Footer = () => {
               third-party links only. Built by{' '}
               <a href="https://github.com/skgupta507" target="_blank" rel="noopener noreferrer"
                 className="font-semibold hover:underline" style={{ color: 'var(--neon-pink)' }}>
-                Sunil
+                SK Gupta
               </a>.
             </p>
             {/* Live status — mirrors hero badge */}

@@ -1,14 +1,15 @@
-import { AuthCard, authViewPaths } from '@daveyplate/better-auth-ui';
+// Auth is now handled by Firebase.
+// This stub replaces the old @daveyplate/better-auth-ui auth page.
+// The AuthModal component (components/auth-modal.tsx) handles all auth UI.
+'use client';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
-export function generateStaticParams() {
-  return Object.values(authViewPaths).map((pathname) => ({ pathname }));
-}
-
-export default async function AuthPage({ params }: { params: Promise<{ pathname: string }> }) {
-  const { pathname } = await params;
-  return (
-    <main className="flex min-h-screen items-center justify-center p-4">
-      <AuthCard pathname={pathname} />
-    </main>
-  );
+export default function AuthPage() {
+  const router = useRouter();
+  useEffect(() => {
+    // Redirect to home — auth is handled by the modal on any page
+    router.replace('/');
+  }, [router]);
+  return null;
 }
