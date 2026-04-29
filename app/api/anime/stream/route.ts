@@ -27,8 +27,9 @@ export async function GET(req: NextRequest) {
 
     // Find episode by number
     const epNum = parseInt(ep);
-    const epObj = episodes.find((e: any) => e.episode === epNum || e.episode_number === epNum)
-      || episodes[epNum - 1];
+    const epObj =
+      episodes.find((e: any) => e.episode === epNum || e.episode_number === epNum) ||
+      episodes[epNum - 1];
 
     if (!epObj) return NextResponse.json({ sources: [] });
 

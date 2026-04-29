@@ -2,7 +2,13 @@ import Link from 'next/link';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { anilist } from '@/lib/anilist';
 
-export default async function WatchContainer({ id, currentEp }: { id: string; currentEp?: string }) {
+export default async function WatchContainer({
+  id,
+  currentEp,
+}: {
+  id: string;
+  currentEp?: string;
+}) {
   let episodes: { number: number; title: string }[] = [];
   try {
     const data = await anilist.getById(Number(id));
@@ -18,19 +24,23 @@ export default async function WatchContainer({ id, currentEp }: { id: string; cu
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-3">
-        <span className="text-[0.6rem] tracking-[0.25em] text-white/30 uppercase"
-          style={{ fontFamily: 'Share Tech Mono, monospace' }}>
+        <span
+          className="text-[0.6rem] tracking-[0.25em] text-white/30 uppercase"
+          style={{ fontFamily: 'Share Tech Mono, monospace' }}
+        >
           // EPISODE INDEX
         </span>
-        <div className="flex-1 h-px bg-white/5" />
-        <span className="text-[0.55rem] tracking-widest text-white/20"
-          style={{ fontFamily: 'Share Tech Mono, monospace' }}>
+        <div className="h-px flex-1 bg-white/5" />
+        <span
+          className="text-[0.55rem] tracking-widest text-white/20"
+          style={{ fontFamily: 'Share Tech Mono, monospace' }}
+        >
           {episodes.length} EPISODES
         </span>
       </div>
       <ScrollArea className="h-[320px] border border-white/8">
         <div className="grid grid-cols-3 gap-1.5 p-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
-          {episodes.map(ep => {
+          {episodes.map((ep) => {
             const isCurrent = currentEp === String(ep.number);
             return (
               <Link
@@ -42,8 +52,10 @@ export default async function WatchContainer({ id, currentEp }: { id: string; cu
                     : 'border-white/6 hover:border-[#BD00FF]/30 hover:bg-[#BD00FF]/5'
                 }`}
               >
-                <span className={`text-[0.6rem] tracking-widest ${isCurrent ? 'text-[#BD00FF]' : 'text-white/40'}`}
-                  style={{ fontFamily: 'Share Tech Mono, monospace' }}>
+                <span
+                  className={`text-[0.6rem] tracking-widest ${isCurrent ? 'text-[#BD00FF]' : 'text-white/40'}`}
+                  style={{ fontFamily: 'Share Tech Mono, monospace' }}
+                >
                   E{String(ep.number).padStart(2, '0')}
                 </span>
               </Link>

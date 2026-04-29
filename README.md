@@ -20,6 +20,7 @@ DemonLord is a free, open-source streaming site for movies, TV shows, anime, dra
 - 📱 **PWA** — installable on mobile
 
 ## Servers (Movie Player)
+
 Default · Vidora · EmbedSu · AutoEmbed · VidSrc · SuperEmbed · 2Embed · VidLink · Videasy · 111Movies · Vidzee HD · Vidzee 4K
 
 ## Stack
@@ -50,17 +51,18 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 See `example.env` for all variables. The essential ones:
 
-| Variable | Description |
-|---|---|
-| `TMDB_API_KEY` | Get at themoviedb.org/settings/api |
+| Variable              | Description                              |
+| --------------------- | ---------------------------------------- |
+| `TMDB_API_KEY`        | Get at themoviedb.org/settings/api       |
 | `SCREENSCAPE_API_KEY` | Get at screenscapeapi.dev/dashboard/apis |
-| `DATABASE_URL` | Neon PostgreSQL connection string |
-| `BETTER_AUTH_SECRET` | Random 32-char secret |
-| `BETTER_AUTH_URL` | Your site URL |
+| `DATABASE_URL`        | Neon PostgreSQL connection string        |
+| `BETTER_AUTH_SECRET`  | Random 32-char secret                    |
+| `BETTER_AUTH_URL`     | Your site URL                            |
 
 ## ScreenScape API
 
 DemonLord integrates [ScreenScape API](https://screenscapeapi.dev) for extended content from:
+
 - **KMMovies** — Latest Bollywood/Hollywood + download links
 - **AnimeSalt** — Anime streaming + search
 - **AnimePahe** — Anime alternate provider

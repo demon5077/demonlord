@@ -9,7 +9,10 @@ export function useSearch(search: string, category: SearchCategory) {
   const [results, setResults] = useState<any>(null);
 
   useEffect(() => {
-    if (!search.trim() || search.length < 2) { setResults(null); return; }
+    if (!search.trim() || search.length < 2) {
+      setResults(null);
+      return;
+    }
 
     const delay = setTimeout(async () => {
       setIsLoading(true);

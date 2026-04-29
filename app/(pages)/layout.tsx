@@ -8,11 +8,9 @@ export default function PagesLayout({ children }: { children: React.ReactNode })
   const isHome = pathname === '/';
 
   return (
-    <div suppressHydrationWarning className="flex flex-col min-h-screen w-full">
+    <div suppressHydrationWarning className="flex min-h-screen w-full flex-col">
       {!isHome && <SiteHeader />}
-      <main className="flex-1 w-full">
-        {children}
-      </main>
+      <main className="w-full flex-1">{children}</main>
       {!isHome && <Footer />}
     </div>
   );

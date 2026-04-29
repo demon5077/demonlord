@@ -10,10 +10,7 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const [movies, anime] = await Promise.allSettled([
-      kmmovies.search(q),
-      animesalt.search(q),
-    ]);
+    const [movies, anime] = await Promise.allSettled([kmmovies.search(q), animesalt.search(q)]);
 
     return NextResponse.json({
       movies: movies.status === 'fulfilled' ? movies.value : null,

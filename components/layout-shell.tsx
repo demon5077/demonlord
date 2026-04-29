@@ -9,15 +9,13 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
 
   if (isHome) {
     // Landing page: full width, no sidebar
-    return <div className="w-full min-h-screen">{children}</div>;
+    return <div className="min-h-screen w-full">{children}</div>;
   }
 
   return (
     <>
       <AppSidebar variant="inset" />
-      <SidebarInset className="overflow-x-hidden">
-        {children}
-      </SidebarInset>
+      <SidebarInset className="overflow-x-hidden">{children}</SidebarInset>
     </>
   );
 }
